@@ -31,6 +31,7 @@ int fibonaci(int n){
     if (n == fn) return 1;
     else return 0;
 }
+// TODO: Rin - recursive to optimize fibonacci problem
 
 int main(){
     int m,n;
