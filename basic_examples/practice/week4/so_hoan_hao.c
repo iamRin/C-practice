@@ -32,4 +32,6 @@ int main(){
         printf ("0");
     }
     return 0;
+
+    // TODO: Thay doi cua win 2
 }

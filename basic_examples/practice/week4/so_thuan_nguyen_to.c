@@ -40,4 +40,16 @@ int main(){
     }
     printf ("\n %d", k);
     return 0;
+
+    // TODO: Thay doi cua Win
+
+    // *Draft 
+
+    //        commit
+
+    // Stage
+
+    //        push
+
+    // Github
 }
