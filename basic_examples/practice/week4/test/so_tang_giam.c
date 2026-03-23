@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 int so_nguyen_to(int n) {
     if (n < 2) return 0;
@@ -9,30 +10,24 @@ int so_nguyen_to(int n) {
     return 1;
 }
 
-int tang_dan(int n){
-        while (n >= 10){
-            int truoc = n % 10;
-            int sau = (n / 10) % 10;
-            if (truoc <= sau){
-                return 0;
-            }
-            n /= 10;
+int tang_dan_va_giam_dan(int n){
+    int k = 0;
+    int dem = 0;
+    while (n >= 10){
+        int truoc = n % 10;
+        int sau = (n / 10) % 10;
+        if (truoc > sau){
+            k++;
         }
-        return 1;
-}
-
-int giam_dan(int n){
-        while (n >= 10){
-            int truoc = n % 10;
-            int sau = (n / 10) % 10;
-            if (truoc >= sau){
-                return 0;
-            }
-            n /= 10;
+        if (sau > truoc){
+            k--;
         }
-        return 1;
+        n /= 10;
+        dem = dem + 1;
+    }
+    if (abs(k) == dem) return 1;
+    return 0;
 }
-// 231
 
 int main(){
     int m;
@@ -41,7 +36,7 @@ int main(){
     int start = pow(10, m-1);
     int end = pow(10, m);
     for (int i = start; i < end; i++){
-        if (so_nguyen_to(i) && (tang_dan(i) ||  giam_dan(i))){
+        if (so_nguyen_to(i) && tang_dan_va_giam_dan(i)){
             k++;
             printf("%d ", i);
         }
