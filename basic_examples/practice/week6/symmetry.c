@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-int symmetry (char c[]){
+int is_symmetric(char c[]){
     int l = 0, r = strlen(c) - 1;
     while (l < r){
         if (c[l] != c[r]) return 0;
@@ -16,6 +16,6 @@ int symmetry (char c[]){
 int main(){
     char c[1005];
     scanf("%[^\n]", c);
-    if (symmetry(c)) printf("YES");
+    if (is_symmetric(c)) printf("YES");
     else printf("NO");
 }

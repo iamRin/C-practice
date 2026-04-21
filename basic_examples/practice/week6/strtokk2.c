@@ -22,4 +22,5 @@ int main(){
         }
         token = strtok(NULL, " ");
     }
+    printf("\n");
 }
