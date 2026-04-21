@@ -3,6 +3,7 @@
 int count[1000001] = {0};
 
 int main(){
+
     int n;
     scanf("%d", &n);
     int arr[n];
@@ -27,4 +28,5 @@ int main(){
     }
 
     printf("%d %d", fre, res);
+    
 }
