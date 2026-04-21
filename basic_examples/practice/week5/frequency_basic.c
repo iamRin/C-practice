@@ -3,6 +3,7 @@
 int mark[1000001] = {0};
 
 int main(){
+
     int n;
     scanf("%d", &n);
     int arr[n];

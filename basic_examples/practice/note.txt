@@ -1,0 +1,5 @@
+22/04/2026
+- pointers (review)
+- alphabet
+- length of string
+- research for git branch, pull request
